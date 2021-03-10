@@ -40,7 +40,7 @@ st.subheader('User Input parameters')
 st.write(df)
 
 
-clf = pickle.load(open('penguins_clf.pkl', 'rb'))
+clf = pickle.load(open('iris_clf.pkl', 'rb'))
 
 prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
@@ -60,3 +60,8 @@ st.write(prediction_pro)
 
 st.subheader('Image: Iris ' + labels[int(prediction)])
 st.image(images[int(prediction)], width=500)
+
+
+st.write("""
+### Made with ❤ by Deimel
+""")
